@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Cancer Prediction</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="{{ url_for('static', filename='css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{ url_for('static', filename='css/style.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <center>
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="">MACHINE LEARNING</a></center>
+      <!-- <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul> -->
+
+      <!-- <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div> -->
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Cancer Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the probability
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/Predict' method="POST" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="first_name"><b class="black-text">Alcoholuse</b></label>
+            <br>
+            <br>
+          <input   id="first_name" name="Alcoholuse"type="num" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="last_name"><b class="black-text">DustAllergy </b></label>
+            <br>
+            <br>
+          <input id="last_name"  name="DustAllergy" type="num" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="_name"><b class="black-text">OccuPationalHazards</b></label>
+            <br>
+            <br>
+          <input id="_name" name="OccuPationalHazards" type="num" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b class="black-text">GeneticRisk</b></label>
+            <br>
+            <br>
+          <input id="_name" name="GeneticRisk" type="num" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b class="black-text">chronicLungDisease</b></label>
+            <br>
+            <br>
+          <input id="_name" name="chronicLungDisease" type="num" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b class="black-text">BalancedDiet</b></label>
+            <br>
+            <br>
+          <input id="_name" name="BalancedDiet" type="num" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b class="black-text">Obesity</b></label>
+            <br>
+            <br>
+          <input id="_name" name="Obesity" type="num" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b class="black-text">PassiveSmoker</b></label>
+            <br>
+            <br>
+          <input id="_name" name="PassiveSmoker" type="num" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b class="black-text">ChestPain</b></label>
+            <br>
+            <br>
+          <input id="_name" name="ChestPain" type="num" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b class="black-text">CoughingofBlood</b></label>
+            <br>
+            <br>
+          <input id="_name" name="CoughingofBlood" type="num" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b class="black-text">Fatigue</b></label>
+            <br>
+            <br>
+          <input id="_name" name="Fatigue" type="num" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b class="black-text">ShortnessofBreath</b></label>
+            <br>
+            <br>
+          <input id="_name" name="ShortnessofBreath" type="num" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="_name"><b class="black-text">FrequentCold</b></label>
+            <br>
+            <br>
+          <input id="_name" name="FrequentCold" type="num" class="validate">
+
+        </div>
+
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <!-- <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Crime Reports</h5>
+
+            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+          </div> -->
+
+              <!-- <button class="btn waves-effect waves-light" type="submit" name="action">Check
+    <i class="material-icons right">send</i>
+              </button>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+            <h5 class="center">Crime Prediction</h5>
+
+            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+          </div>
+            <a href="/crime"> <button class="btn waves-effect waves-light"  name="">
+    <i class="material-icons right">Predict Crime</i><button></a>
+        </div> -->
+
+        <!-- <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Check on Map</h5>
+
+            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+          </div>
+        </div>
+
+              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+              </button>
+      </div> -->
+
+    <!-- </div>
+    <br><br>
+  </div>
+  </div>> -->
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="black-text">BY </h5>
+          <p class="black-text text-lighten-4">20341A1290 - P MANI BHARGAV </p><p class="black-text text-lighten-4">20341A12B2 - T VIVEK RATNA</P><p class="black-text text-lighten-4">20341A12C5 - V V RAMA RAJU</P><p class="black-text text-lighten-4">20341A12C6 - Y MADHURI</P><p class="black-text text-lighten-4">20341A12C7 - Y SAI POLARAJU</P><p class="black-text text-lighten-4">20341A12C8 - Y SIVASHANKAR REDDY</P><p class="black-text text-lighten-4">21345A1208 - T ANIL KUMAR</P>
+<br>
+
+
+        </div>
+        <div class="col l6 s12">
+          <h5 class="black-text">Under the Guidance of : </h5>
+            <p class="black-text text-lighten-4">Mrs. T Daniya</P>
+              <p class="black-text text-lighten-4">Assistant Professor</P>
+                <p class="black-text text-lighten-4">Department of IT</P>
+
+        </div>
+        <!-- <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div> -->
+      <!-- </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      </div>
+    </div>
+  </footer> -->
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="C:\Users\DELL\Desktop\Cancer_Prediction\static\js\materialize.js"></script>
+  <script src="C:\Users\DELL\Desktop\Cancer_Prediction\static\js\init.js"></script>
+
+  </body>
+</html>
